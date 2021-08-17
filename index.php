@@ -8,7 +8,7 @@
 <h1>掲示板</h1>
 <section>
     <h2>新規投稿</h2>
-    <form action="finish.php" method="post">
+    <form action="redirect.php" method="post">
         名前: <input type="text" name="author" value=""><br>
         本文: <input type="text" name="content" value=""><br>
         <button type="submit">投稿</button>
