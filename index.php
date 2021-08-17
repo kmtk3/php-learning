@@ -17,15 +17,15 @@
 <section>
     <h2>投稿一覧</h2>
     <?php
-     $n = $db -> query("SELECT * FROM board02 ORDER BY id DESC");
+     $query_result = $db -> query("SELECT * FROM board02 ORDER BY id DESC");
      ?>
     <ul>
-        <?php while ($i = $n -> fetch()):?>
+        <?php while ($post = $query_result -> fetch()):?>
 
-        <li style="list-style: none;"><?=htmlspecialchars($i['id']);?>
-            <?=htmlspecialchars($i['content']);?>
-            (<?=htmlspecialchars($i['author']);?>)
-            <?=htmlspecialchars($i['time']);?>
+        <li style="list-style: none;"><?=htmlspecialchars($post['id']);?>
+            <?=htmlspecialchars($post['content']);?>
+            (<?=htmlspecialchars($post['author']);?>)
+            <?=htmlspecialchars($post['time']);?>
         </li>
         <?php endwhile; ?>
     </ul>
